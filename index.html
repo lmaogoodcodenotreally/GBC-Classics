@@ -53,7 +53,7 @@
     </div>
     <script>
         async function fetchGameData() {
-            const response = await fetch('https://raw.githubusercontent.com/lmaogoodcodenotreally/GBC-Classics/main/lclassics.titlesdb');
+            const response = await fetch('https://raw.githubusercontent.com/lmaogoodcodenotreally/games-repo/main/lclassics.titlesdb');
             const data = await response.json();
             return data.titles;
         }
@@ -62,7 +62,7 @@
             const block = document.createElement('div');
             block.className = 'game-block';
             block.innerHTML = `
-                <img src="https://raw.githubusercontent.com/lmaogoodcodenotreally/GBC-Classics/main/${game.cover}" alt="${game.title}">
+                <img src="https://raw.githubusercontent.com/lmaogoodcodenotreally/games-repo/main/${game.cover}" alt="${game.title}">
                 <div class="game-title">${game.title}</div>
                 <div class="game-info">
                     <strong>Platform:</strong> ${game.platform}<br>
